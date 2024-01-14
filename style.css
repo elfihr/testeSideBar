@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --cor-um:#f8e58a;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(./img/night-01.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: red;
+    backdrop-filter: blur(50px);
+    width: 80px;
+    height: 100%;
+    padding: 0.4rem 1rem;
+    transition: .5s;
+}
+
+.sidebar.active{
+    width: 200px;
+    
+}
+
+/*==iconesMenoClose==*/
+
+#close-menu {
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked~.icon-menu #open-menu{
+    display: none;
+}
+
+#check:checked~.icon-menu #close-menu{
+    display: block;
+}
+
+.icon-menu i{
+    font-size: 1.5rem;
+    color: var(--cor-um);
+}
+
+/*==================*/
+
+.logo{
+    display: none;
+    font-size: 1.5rem;
+    color: var(--cor-um);
+}
+
+.sidebar.active .logo{
+    display: block;
+}
+
+.sidebar_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+/*==design Itens Menu==*/
+
+.list a{
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    color: var(--cor-um);
+    border-radius: 6px;
+}
+
+.list_item_links{
+    display: none;
+}
+
+.sidebar.active .list_item_links{
+    display: block;
+}
+
+.list a:hover{
+    background: rgba(255,255,255,.2);
+}
+
+.list .list a{
+    text-align: center;
+}
+
+.list i{
+    min-width: 3rem;
+    text-align: center;
+}
+
+.list_item{
+    height: 3rem;
+    min-width: 50px;
+    list-style: none;
+    line-height: 50px;
+
+}
+
+.list_item a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*==================*/
+
+.sideFooter{
+    padding-top: 5rem;
+    text-align: center;
+    display: none;
+}
+
+.sidebar.active .sideFooter{
+    display: block;
+}
